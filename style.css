@@ -117,9 +117,13 @@ body {
     margin-bottom: 3rem;
 }
 
-.btn {
+button {
+    outline: none;
+    border:none;
+    color: #fff;
     text-align: center;
     font-weight: 700;
+    font-size: 1.6rem;
     background-color: var(--color-lime);
     padding: 1.4rem;
     border-radius: 6px;
@@ -128,12 +132,12 @@ body {
     cursor: pointer;
 }
 
-.btn:hover {
+button:hover {
     transform: translateY(-.2rem);
     box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.15)
 }
 
-.btn:active {
+button:active {
     transform: translateY(0rem);
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.15);
 }
@@ -160,7 +164,7 @@ body {
     }
 
     .card--top {
-        padding: 3.75rem;
+        padding: 4rem;
     }
     
     .heading--main {
@@ -188,7 +192,7 @@ body {
     }
 
     .card--bottom {
-        padding: 4rem 3.75rem;
+        padding: 4rem;
         flex: 1 1 50%;
     }
 }
