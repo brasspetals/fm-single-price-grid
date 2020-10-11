@@ -1,0 +1,200 @@
+:root {
+    --color-cyan: rgb(42, 178, 175);
+    --color-lime: hsl(71, 73%, 54%);
+    --color-gray-light: hsl(204, 43%, 93%);
+    --color-gray-dark: hsl(218, 22%, 67%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, 
+*::before, 
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; 
+    /* if default browser font is 16px, this sets it to 10px (1rem = 10px) */
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    background-color: var(--color-gray-light);
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7rem 3rem;
+}
+
+.component-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 370px;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.card--top {
+    background-color: #fff;
+    color: var(--color-gray-dark);
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 2.5rem;
+}
+
+.heading--main {
+    color: var(--color-cyan);
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.heading--sub {
+    color: var(--color-lime);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.content--top {
+    font-size: 1.4rem;
+    line-height: 1.8;
+}
+
+.bottom-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    color: #fff;
+    overflow: hidden;
+}
+
+.card--bottom {
+    padding: 2.5rem;
+}
+
+.heading--bottom {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+#subscription {
+    background-color: var(--color-cyan);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.price {
+    font-size: 3.1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.price--detail {
+    font-size: 1.6rem;
+    font-weight: 400;
+    opacity: .7;
+    margin-left: 1.5rem;
+}
+
+.content--bottom {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.btn {
+    text-align: center;
+    font-weight: 700;
+    background-color: var(--color-lime);
+    padding: 1.4rem;
+    border-radius: 6px;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-.2rem);
+    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.15)
+}
+
+.btn:active {
+    transform: translateY(0rem);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+#why {
+    background-color: rgba(42, 178, 176, 0.85);
+}
+
+#why ul {
+    list-style: none;
+    font-weight: 400;
+    font-size: 1.4rem;   
+}
+
+#why li:not(:last-of-type) {
+    margin-bottom: .4rem; 
+}
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 580px) {
+    .component-wrapper {
+        max-width: 640px;
+        border-radius: 8px;
+    }
+
+    .card--top {
+        padding: 3.75rem;
+    }
+    
+    .heading--main {
+        font-size: 2.3rem;
+        margin-bottom: 2.3rem;
+    }
+
+    .heading--sub, .heading--bottom {
+        font-size: 1.8rem;
+    }
+
+    .heading--sub {
+        margin-bottom: 1rem;
+    }
+
+    .content--top {
+        font-size: 1.6rem;
+        line-height: 1.6;
+    }
+
+    .bottom-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+    .card--bottom {
+        padding: 4rem 3.75rem;
+        flex: 1 1 50%;
+    }
+}
+
+@media only screen and (min-height: 750px) {
+    .container {
+        height: 100vh;
+    }
+}
